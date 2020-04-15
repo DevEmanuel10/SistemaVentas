@@ -1,0 +1,365 @@
+﻿namespace sesion.Clientes
+{
+    partial class Cliente
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lblGestionCliente = new System.Windows.Forms.Label();
+            this.GroupCliente = new System.Windows.Forms.GroupBox();
+            this.txtCodigoPostal = new System.Windows.Forms.TextBox();
+            this.cmbLocalidad = new System.Windows.Forms.ComboBox();
+            this.cmbProvincia = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNroDoc = new System.Windows.Forms.TextBox();
+            this.lblNroDoc = new System.Windows.Forms.Label();
+            this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
+            this.cmbTipoCliente = new System.Windows.Forms.ComboBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDomicilio = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.TipoDocumento = new System.Windows.Forms.Label();
+            this.lblTipoCliente = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblDomicilio = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.grCliente = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GroupCliente.SuspendLayout();
+            this.grCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblGestionCliente
+            // 
+            this.lblGestionCliente.AutoSize = true;
+            this.lblGestionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionCliente.Location = new System.Drawing.Point(305, 9);
+            this.lblGestionCliente.Name = "lblGestionCliente";
+            this.lblGestionCliente.Size = new System.Drawing.Size(159, 25);
+            this.lblGestionCliente.TabIndex = 0;
+            this.lblGestionCliente.Text = "Gestion Cliente";
+            // 
+            // GroupCliente
+            // 
+            this.GroupCliente.Controls.Add(this.txtCodigoPostal);
+            this.GroupCliente.Controls.Add(this.cmbLocalidad);
+            this.GroupCliente.Controls.Add(this.cmbProvincia);
+            this.GroupCliente.Controls.Add(this.label3);
+            this.GroupCliente.Controls.Add(this.label2);
+            this.GroupCliente.Controls.Add(this.label1);
+            this.GroupCliente.Controls.Add(this.txtNroDoc);
+            this.GroupCliente.Controls.Add(this.lblNroDoc);
+            this.GroupCliente.Controls.Add(this.cmbTipoDoc);
+            this.GroupCliente.Controls.Add(this.cmbTipoCliente);
+            this.GroupCliente.Controls.Add(this.txtMail);
+            this.GroupCliente.Controls.Add(this.txtTelefono);
+            this.GroupCliente.Controls.Add(this.txtDomicilio);
+            this.GroupCliente.Controls.Add(this.txtApellido);
+            this.GroupCliente.Controls.Add(this.txtNombre);
+            this.GroupCliente.Controls.Add(this.TipoDocumento);
+            this.GroupCliente.Controls.Add(this.lblTipoCliente);
+            this.GroupCliente.Controls.Add(this.lblMail);
+            this.GroupCliente.Controls.Add(this.lblTelefono);
+            this.GroupCliente.Controls.Add(this.lblDomicilio);
+            this.GroupCliente.Controls.Add(this.lblApellido);
+            this.GroupCliente.Controls.Add(this.lblNombre);
+            this.GroupCliente.Location = new System.Drawing.Point(44, 48);
+            this.GroupCliente.Name = "GroupCliente";
+            this.GroupCliente.Size = new System.Drawing.Size(272, 391);
+            this.GroupCliente.TabIndex = 1;
+            this.GroupCliente.TabStop = false;
+            this.GroupCliente.Text = "Cliente";
+            // 
+            // txtCodigoPostal
+            // 
+            this.txtCodigoPostal.Location = new System.Drawing.Point(110, 215);
+            this.txtCodigoPostal.Name = "txtCodigoPostal";
+            this.txtCodigoPostal.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoPostal.TabIndex = 23;
+            // 
+            // cmbLocalidad
+            // 
+            this.cmbLocalidad.FormattingEnabled = true;
+            this.cmbLocalidad.Location = new System.Drawing.Point(110, 182);
+            this.cmbLocalidad.Name = "cmbLocalidad";
+            this.cmbLocalidad.Size = new System.Drawing.Size(121, 21);
+            this.cmbLocalidad.TabIndex = 22;
+            // 
+            // cmbProvincia
+            // 
+            this.cmbProvincia.FormattingEnabled = true;
+            this.cmbProvincia.Location = new System.Drawing.Point(110, 151);
+            this.cmbProvincia.Name = "cmbProvincia";
+            this.cmbProvincia.Size = new System.Drawing.Size(121, 21);
+            this.cmbProvincia.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 222);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Codigo Postal";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 185);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Localidad";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Provincia";
+            // 
+            // txtNroDoc
+            // 
+            this.txtNroDoc.Location = new System.Drawing.Point(110, 117);
+            this.txtNroDoc.Name = "txtNroDoc";
+            this.txtNroDoc.Size = new System.Drawing.Size(100, 20);
+            this.txtNroDoc.TabIndex = 15;
+            // 
+            // lblNroDoc
+            // 
+            this.lblNroDoc.AutoSize = true;
+            this.lblNroDoc.Location = new System.Drawing.Point(17, 117);
+            this.lblNroDoc.Name = "lblNroDoc";
+            this.lblNroDoc.Size = new System.Drawing.Size(82, 13);
+            this.lblNroDoc.TabIndex = 14;
+            this.lblNroDoc.Text = "Nro Documento";
+            this.lblNroDoc.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // cmbTipoDoc
+            // 
+            this.cmbTipoDoc.FormattingEnabled = true;
+            this.cmbTipoDoc.Location = new System.Drawing.Point(109, 83);
+            this.cmbTipoDoc.Name = "cmbTipoDoc";
+            this.cmbTipoDoc.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoDoc.TabIndex = 13;
+            // 
+            // cmbTipoCliente
+            // 
+            this.cmbTipoCliente.FormattingEnabled = true;
+            this.cmbTipoCliente.Location = new System.Drawing.Point(110, 348);
+            this.cmbTipoCliente.Name = "cmbTipoCliente";
+            this.cmbTipoCliente.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoCliente.TabIndex = 12;
+            // 
+            // txtMail
+            // 
+            this.txtMail.Location = new System.Drawing.Point(110, 315);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(100, 20);
+            this.txtMail.TabIndex = 11;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(110, 281);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.TabIndex = 10;
+            // 
+            // txtDomicilio
+            // 
+            this.txtDomicilio.Location = new System.Drawing.Point(109, 250);
+            this.txtDomicilio.Name = "txtDomicilio";
+            this.txtDomicilio.Size = new System.Drawing.Size(100, 20);
+            this.txtDomicilio.TabIndex = 9;
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(109, 56);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.TabIndex = 8;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(109, 27);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 7;
+            // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.AutoSize = true;
+            this.TipoDocumento.Location = new System.Drawing.Point(16, 88);
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.Size = new System.Drawing.Size(83, 13);
+            this.TipoDocumento.TabIndex = 6;
+            this.TipoDocumento.Text = "TipoDocumento";
+            // 
+            // lblTipoCliente
+            // 
+            this.lblTipoCliente.AutoSize = true;
+            this.lblTipoCliente.Location = new System.Drawing.Point(17, 351);
+            this.lblTipoCliente.Name = "lblTipoCliente";
+            this.lblTipoCliente.Size = new System.Drawing.Size(60, 13);
+            this.lblTipoCliente.TabIndex = 5;
+            this.lblTipoCliente.Text = "TipoCliente";
+            // 
+            // lblMail
+            // 
+            this.lblMail.AutoSize = true;
+            this.lblMail.Location = new System.Drawing.Point(18, 313);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(26, 13);
+            this.lblMail.TabIndex = 4;
+            this.lblMail.Text = "Mail";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(19, 284);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.TabIndex = 3;
+            this.lblTelefono.Text = "Telefono";
+            // 
+            // lblDomicilio
+            // 
+            this.lblDomicilio.AutoSize = true;
+            this.lblDomicilio.Location = new System.Drawing.Point(17, 250);
+            this.lblDomicilio.Name = "lblDomicilio";
+            this.lblDomicilio.Size = new System.Drawing.Size(49, 13);
+            this.lblDomicilio.TabIndex = 2;
+            this.lblDomicilio.Text = "Domicilio";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(16, 59);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.TabIndex = 1;
+            this.lblApellido.Text = "Apellido";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(16, 30);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(130, 445);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // grCliente
+            // 
+            this.grCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grCliente.Controls.Add(this.dataGridView1);
+            this.grCliente.Location = new System.Drawing.Point(322, 52);
+            this.grCliente.Name = "grCliente";
+            this.grCliente.Size = new System.Drawing.Size(521, 378);
+            this.grCliente.TabIndex = 3;
+            this.grCliente.TabStop = false;
+            this.grCliente.Text = "Cliente";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 26);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(487, 334);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Cliente
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(855, 508);
+            this.Controls.Add(this.grCliente);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.GroupCliente);
+            this.Controls.Add(this.lblGestionCliente);
+            this.Name = "Cliente";
+            this.Text = "Mail";
+            this.Load += new System.EventHandler(this.Cliente_Load);
+            this.GroupCliente.ResumeLayout(false);
+            this.GroupCliente.PerformLayout();
+            this.grCliente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblGestionCliente;
+        private System.Windows.Forms.GroupBox GroupCliente;
+        private System.Windows.Forms.Label lblNroDoc;
+        private System.Windows.Forms.ComboBox cmbTipoDoc;
+        private System.Windows.Forms.ComboBox cmbTipoCliente;
+        private System.Windows.Forms.TextBox txtMail;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtDomicilio;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label TipoDocumento;
+        private System.Windows.Forms.Label lblTipoCliente;
+        private System.Windows.Forms.Label lblMail;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblDomicilio;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.TextBox txtNroDoc;
+        private System.Windows.Forms.TextBox txtCodigoPostal;
+        private System.Windows.Forms.ComboBox cmbLocalidad;
+        private System.Windows.Forms.ComboBox cmbProvincia;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox grCliente;
+        private System.Windows.Forms.DataGridView dataGridView1;
+    }
+}
