@@ -4,37 +4,37 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b6570d884e20478b95f8d07d90d28ac9" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_4BitsModel.clientes" Width="1.5" PointX="5.25" PointY="28.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.compras" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.detalle_Compras" Width="1.5" PointX="5.25" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.detalle_ventas" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.estados" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.grupos" Width="1.5" PointX="3" PointY="21.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.localidades" Width="1.5" PointX="3" PointY="29.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.lote" Width="1.5" PointX="3" PointY="17.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.productos" Width="1.5" PointX="6" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.proveedores" Width="1.5" PointX="8.25" PointY="31.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.provincias" Width="1.5" PointX="3" PointY="35.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.rel_UsGr" Width="1.5" PointX="5.25" PointY="19.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.tipo_Clientes" Width="1.5" PointX="3" PointY="39" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.tipo_Doc" Width="1.5" PointX="3" PointY="41.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.unidades" Width="1.5" PointX="3.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.usuarios" Width="1.5" PointX="8.25" PointY="26" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_4BitsModel.ventas" Width="1.5" PointX="10.5" PointY="24" IsExpanded="true" />
+      <Diagram DiagramId="f52655e08f9b4dfdb26517a8614c6d6c" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_4BitsModel.clientes" Width="1.5" PointX="5.25" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.compras" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.Departamentos" Width="1.5" PointX="0.75" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.detalle_Compras" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.detalle_ventas" Width="1.5" PointX="10.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.estados" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.grupos" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.Localidades" Width="1.5" PointX="3" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.lote" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.productos" Width="1.5" PointX="8" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.proveedores" Width="1.5" PointX="8.25" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.Provincias" Width="1.5" PointX="1.5" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.rel_UsGr" Width="1.5" PointX="5.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.tipo_Clientes" Width="1.5" PointX="3" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.tipo_Doc" Width="1.5" PointX="3" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.unidades" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.usuarios" Width="1.5" PointX="5.25" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_4BitsModel.ventas" Width="1.5" PointX="7.5" PointY="21.625" IsExpanded="true" />
         <AssociationConnector Association="DB_4BitsModel.FK_clientes_estados" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_4BitsModel.FK_clientes_localidades" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_4BitsModel.FK_clientes_provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_4BitsModel.FK_clientes_Localidades" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_clientes_tipo_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_clientes_tipo_Doc" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_ventas_clientes" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_compras_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_detalle_Compras_compras" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_4BitsModel.FK_Departamentos_Provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_4BitsModel.FK_Localidades_Departamentos" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_detalle_Compras_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_detalle_Compras_lote" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_detalle_Compras_productos" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_4BitsModel.FK_detalle_Compras_provincias" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_detalle_ventas_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_detalle_ventas_productos" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_detalle_ventas_ventas" ManuallyRouted="false" />
@@ -42,17 +42,15 @@
         <AssociationConnector Association="DB_4BitsModel.FK_lote_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_productos_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_proveedores_estados" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_4BitsModel.FK_provincias_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_rel_UsGr_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_tipo_Clientes_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_tipo_Doc_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_usuarios_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_ventas_estados" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_rel_UsGr_grupos" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_4BitsModel.FK_proveedores_localidades" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_4BitsModel.FK_proveedores_Localidades" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_lote_productos" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_productos_unidades" ManuallyRouted="false" />
-        <AssociationConnector Association="DB_4BitsModel.FK_proveedores_provincias" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_proveedores_tipo_Doc" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_rel_UsGr_usuarios" ManuallyRouted="false" />
         <AssociationConnector Association="DB_4BitsModel.FK_usuarios_tipo_Doc" ManuallyRouted="false" />

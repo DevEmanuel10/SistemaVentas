@@ -25,7 +25,6 @@ namespace Modelos.Entity
             this.lote = new HashSet<lote>();
             this.productos = new HashSet<productos>();
             this.proveedores = new HashSet<proveedores>();
-            this.provincias = new HashSet<provincias>();
             this.rel_UsGr = new HashSet<rel_UsGr>();
             this.tipo_Clientes = new HashSet<tipo_Clientes>();
             this.tipo_Doc = new HashSet<tipo_Doc>();
@@ -52,8 +51,6 @@ namespace Modelos.Entity
         public virtual ICollection<productos> productos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<proveedores> proveedores { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<provincias> provincias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<rel_UsGr> rel_UsGr { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

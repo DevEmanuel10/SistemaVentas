@@ -30,12 +30,12 @@
         {
             this.lblGestionCliente = new System.Windows.Forms.Label();
             this.GroupCliente = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbDepartamento = new System.Windows.Forms.ComboBox();
             this.txtCodigoPostal = new System.Windows.Forms.TextBox();
             this.cmbLocalidad = new System.Windows.Forms.ComboBox();
-            this.cmbProvincia = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtNroDoc = new System.Windows.Forms.TextBox();
             this.lblNroDoc = new System.Windows.Forms.Label();
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
@@ -72,12 +72,12 @@
             // 
             // GroupCliente
             // 
+            this.GroupCliente.Controls.Add(this.label1);
+            this.GroupCliente.Controls.Add(this.cmbDepartamento);
             this.GroupCliente.Controls.Add(this.txtCodigoPostal);
             this.GroupCliente.Controls.Add(this.cmbLocalidad);
-            this.GroupCliente.Controls.Add(this.cmbProvincia);
             this.GroupCliente.Controls.Add(this.label3);
             this.GroupCliente.Controls.Add(this.label2);
-            this.GroupCliente.Controls.Add(this.label1);
             this.GroupCliente.Controls.Add(this.txtNroDoc);
             this.GroupCliente.Controls.Add(this.lblNroDoc);
             this.GroupCliente.Controls.Add(this.cmbTipoDoc);
@@ -94,12 +94,31 @@
             this.GroupCliente.Controls.Add(this.lblDomicilio);
             this.GroupCliente.Controls.Add(this.lblApellido);
             this.GroupCliente.Controls.Add(this.lblNombre);
-            this.GroupCliente.Location = new System.Drawing.Point(44, 48);
+            this.GroupCliente.Location = new System.Drawing.Point(33, 39);
             this.GroupCliente.Name = "GroupCliente";
             this.GroupCliente.Size = new System.Drawing.Size(272, 391);
             this.GroupCliente.TabIndex = 1;
             this.GroupCliente.TabStop = false;
             this.GroupCliente.Text = "Cliente";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Departamento";
+            // 
+            // cmbDepartamento
+            // 
+            this.cmbDepartamento.FormattingEnabled = true;
+            this.cmbDepartamento.Location = new System.Drawing.Point(109, 147);
+            this.cmbDepartamento.Name = "cmbDepartamento";
+            this.cmbDepartamento.Size = new System.Drawing.Size(121, 21);
+            this.cmbDepartamento.TabIndex = 24;
+            this.cmbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cmbDepartamento_SelectedIndexChanged);
+            this.cmbDepartamento.SelectionChangeCommitted += new System.EventHandler(this.cmbDepartamento_SelectionChangeCommitted);
             // 
             // txtCodigoPostal
             // 
@@ -115,14 +134,6 @@
             this.cmbLocalidad.Name = "cmbLocalidad";
             this.cmbLocalidad.Size = new System.Drawing.Size(121, 21);
             this.cmbLocalidad.TabIndex = 22;
-            // 
-            // cmbProvincia
-            // 
-            this.cmbProvincia.FormattingEnabled = true;
-            this.cmbProvincia.Location = new System.Drawing.Point(110, 151);
-            this.cmbProvincia.Name = "cmbProvincia";
-            this.cmbProvincia.Size = new System.Drawing.Size(121, 21);
-            this.cmbProvincia.TabIndex = 21;
             // 
             // label3
             // 
@@ -142,15 +153,6 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Localidad";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Provincia";
-            // 
             // txtNroDoc
             // 
             this.txtNroDoc.Location = new System.Drawing.Point(110, 117);
@@ -166,11 +168,14 @@
             this.lblNroDoc.Size = new System.Drawing.Size(82, 13);
             this.lblNroDoc.TabIndex = 14;
             this.lblNroDoc.Text = "Nro Documento";
-            this.lblNroDoc.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbTipoDoc
             // 
             this.cmbTipoDoc.FormattingEnabled = true;
+            this.cmbTipoDoc.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
             this.cmbTipoDoc.Location = new System.Drawing.Point(109, 83);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(121, 21);
@@ -179,6 +184,10 @@
             // cmbTipoCliente
             // 
             this.cmbTipoCliente.FormattingEnabled = true;
+            this.cmbTipoCliente.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
             this.cmbTipoCliente.Location = new System.Drawing.Point(110, 348);
             this.cmbTipoCliente.Name = "cmbTipoCliente";
             this.cmbTipoCliente.Size = new System.Drawing.Size(121, 21);
@@ -296,7 +305,7 @@
             // 
             this.grCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grCliente.Controls.Add(this.dataGridView1);
-            this.grCliente.Location = new System.Drawing.Point(322, 52);
+            this.grCliente.Location = new System.Drawing.Point(311, 39);
             this.grCliente.Name = "grCliente";
             this.grCliente.Size = new System.Drawing.Size(521, 378);
             this.grCliente.TabIndex = 3;
@@ -306,7 +315,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 26);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(487, 334);
             this.dataGridView1.TabIndex = 0;
@@ -355,11 +364,11 @@
         private System.Windows.Forms.TextBox txtNroDoc;
         private System.Windows.Forms.TextBox txtCodigoPostal;
         private System.Windows.Forms.ComboBox cmbLocalidad;
-        private System.Windows.Forms.ComboBox cmbProvincia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grCliente;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbDepartamento;
     }
 }

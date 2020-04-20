@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 using Modelos.Estados;
 
 namespace Modelos
@@ -16,12 +17,28 @@ namespace Modelos
         public Nullable<int> id_provincia { get; set; }
         public Nullable<int> id_localidad { get; set; }
         public Nullable<int> cp { get; set; }
+
+        [StringLength(100)]
+        [Required]
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string domicilio { get; set; }
         public string telefono { get; set; }
+
+        [EmailAddress]
+        [StringLength (100)]
+        [Required]
         public string mail { get; set; }
         public Nullable<int> id_estado { get; set; }
+
+
+
+        public class UserExistAttribute : ValidationAttribute
+        {
+
+        }
+
+
 
     }
 }

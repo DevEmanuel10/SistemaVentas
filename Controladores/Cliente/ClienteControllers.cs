@@ -33,8 +33,7 @@ namespace Controladores
         public void InsertarCliente(string nombre,
                                     string apellido,
                                     int tipoDoc,
-                                    int nrodoc,
-                                    int provincia,
+                                    int nrodoc,                                    
                                     int localidad, 
                                     int codPostal, 
                                     string domicilio, 
@@ -49,8 +48,7 @@ namespace Controladores
                 client.nombre = nombre;
                 client.apellido = apellido;
                 client.id_tipoDoc = tipoDoc;
-                client.nro_doc = nrodoc;
-                client.id_provincia = provincia;
+                client.nro_doc = nrodoc;                
                 client.id_localidad = localidad;
                 client.cp = codPostal;
                 client.domicilio = domicilio;
@@ -66,6 +64,11 @@ namespace Controladores
 
         }
 
+
+        public void inserttest(string nombre)
+        {
+            Console.Write(nombre);
+        }
         
 
 

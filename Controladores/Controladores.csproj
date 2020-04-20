@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente\ClienteControllers.cs" />
+    <Compile Include="Departamento\DepartamentoController.cs" />
     <Compile Include="Localidades\LocalidadesController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia\ProvinciaController.cs" />

@@ -12,26 +12,18 @@ namespace Modelos.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class provincias
+    public partial class Provincias
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public provincias()
+        public Provincias()
         {
-            this.clientes = new HashSet<clientes>();
-            this.detalle_Compras = new HashSet<detalle_Compras>();
-            this.proveedores = new HashSet<proveedores>();
+            this.Departamentos = new HashSet<Departamentos>();
         }
     
-        public int id { get; set; }
-        public string nombre { get; set; }
-        public Nullable<int> id_estado { get; set; }
+        public int ID { get; set; }
+        public string Nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<clientes> clientes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<detalle_Compras> detalle_Compras { get; set; }
-        public virtual estados estados { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<proveedores> proveedores { get; set; }
+        public virtual ICollection<Departamentos> Departamentos { get; set; }
     }
 }

@@ -51,82 +51,78 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente\Cliente.cs" />
-    <Compile Include="Provincia\Provincia.cs" />
+    <Compile Include="Departamentos\Departamento.cs" />
     <Compile Include="Entity\clientes.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\compras.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Departamentos.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\detalle_Compras.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\detalle_ventas.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Entity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Entity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Entity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entity\estados.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\grupos.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity\localidades.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+    <Compile Include="Entity\Localidades.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\lote.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity\MiEntity.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MiEntity.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity\MiEntity.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MiEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity\MiEntity.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MiEntity.edmx</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\productos.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\proveedores.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity\provincias.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+    <Compile Include="Entity\Provincias.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\rel_UsGr.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity\sp_helpdiagrams_Result.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity\sysdiagrams.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\tipo_Clientes.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\tipo_Doc.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\unidades.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\usuarios.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\ventas.cs">
-      <DependentUpon>MiEntity.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Localidades\Localidades.cs" />
+    <Compile Include="Provincia\Provincia.cs" />
     <Compile Include="Estados\Estados.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -134,32 +130,30 @@
     <Folder Include="Usuario\" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Entity\MiEntity.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MiEntity.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="Entity\MiEntity.edmx.diagram">
-      <DependentUpon>MiEntity.edmx</DependentUpon>
+    <EntityDeploy Include="Entity\Entity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Entity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entity\Entity.edmx.diagram">
+      <DependentUpon>Entity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Entity\MiEntity.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MiEntity.Context.cs</LastGenOutput>
-      <DependentUpon>MiEntity.edmx</DependentUpon>
-    </Content>
-    <Content Include="Entity\MiEntity.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MiEntity.edmx</DependentUpon>
-      <LastGenOutput>MiEntity.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Entity\Entity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entity.edmx</DependentUpon>
+      <LastGenOutput>Entity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entity\Entity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entity.edmx</DependentUpon>
+      <LastGenOutput>Entity.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -24,7 +24,6 @@ namespace Modelos.Entity
         public Nullable<int> id_tipoCliente { get; set; }
         public Nullable<int> id_tipoDoc { get; set; }
         public Nullable<int> nro_doc { get; set; }
-        public Nullable<int> id_provincia { get; set; }
         public Nullable<int> id_localidad { get; set; }
         public Nullable<int> cp { get; set; }
         public string nombre { get; set; }
@@ -35,8 +34,7 @@ namespace Modelos.Entity
         public Nullable<int> id_estado { get; set; }
     
         public virtual estados estados { get; set; }
-        public virtual localidades localidades { get; set; }
-        public virtual provincias provincias { get; set; }
+        public virtual Localidades Localidades { get; set; }
         public virtual tipo_Clientes tipo_Clientes { get; set; }
         public virtual tipo_Doc tipo_Doc { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

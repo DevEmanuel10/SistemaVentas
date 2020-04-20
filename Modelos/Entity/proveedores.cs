@@ -17,7 +17,6 @@ namespace Modelos.Entity
         public int id { get; set; }
         public Nullable<int> id_tipoDoc { get; set; }
         public Nullable<int> nro_Doc { get; set; }
-        public Nullable<int> id_provincia { get; set; }
         public Nullable<int> id_localidad { get; set; }
         public string razon_Social { get; set; }
         public Nullable<int> cp { get; set; }
@@ -26,8 +25,7 @@ namespace Modelos.Entity
         public Nullable<int> id_estado { get; set; }
     
         public virtual estados estados { get; set; }
-        public virtual localidades localidades { get; set; }
-        public virtual provincias provincias { get; set; }
+        public virtual Localidades Localidades { get; set; }
         public virtual tipo_Doc tipo_Doc { get; set; }
     }
 }

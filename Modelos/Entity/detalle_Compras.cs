@@ -28,6 +28,5 @@ namespace Modelos.Entity
         public virtual estados estados { get; set; }
         public virtual lote lote { get; set; }
         public virtual productos productos { get; set; }
-        public virtual provincias provincias { get; set; }
     }
 }
