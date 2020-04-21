@@ -307,24 +307,27 @@
             this.grCliente.Controls.Add(this.dataGridView1);
             this.grCliente.Location = new System.Drawing.Point(311, 39);
             this.grCliente.Name = "grCliente";
-            this.grCliente.Size = new System.Drawing.Size(521, 378);
+            this.grCliente.Size = new System.Drawing.Size(912, 391);
             this.grCliente.TabIndex = 3;
             this.grCliente.TabStop = false;
             this.grCliente.Text = "Cliente";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(28, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(487, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(878, 347);
             this.dataGridView1.TabIndex = 0;
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 508);
+            this.ClientSize = new System.Drawing.Size(1257, 515);
             this.Controls.Add(this.grCliente);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.GroupCliente);

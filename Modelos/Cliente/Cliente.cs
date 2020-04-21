@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using Modelos.Estados;
 
-namespace Modelos
+namespace Modelos.Cliente
 {
     public class ClienteViewModel
     {

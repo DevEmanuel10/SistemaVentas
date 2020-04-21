@@ -13,10 +13,8 @@ namespace sesion.Clientes
 {
     public partial class Cliente : Form
     {
-        Controladores.ClienteControllers cliente = new Controladores.ClienteControllers();
-        Controladores.ProvinciaController provincia = new Controladores.ProvinciaController();
-        Controladores.DepartamentoController departamento = new Controladores.DepartamentoController();
-        Controladores.Localidades.LocalidadesController localidades = new Controladores.Localidades.LocalidadesController();
+        
+        
         public Cliente()
         {
             InitializeComponent();
@@ -33,41 +31,28 @@ namespace sesion.Clientes
 
         public void loadCliente()
         {
+            Controladores.ClienteControllers cliente = new Controladores.ClienteControllers();
             dataGridView1.DataSource = cliente.GetCliente();
         }
 
         public void loadDepartamento()
         {
+            Controladores.DepartamentoController departamento = new Controladores.DepartamentoController();
             cmbDepartamento.DataSource = departamento.getDepartamento();
             cmbDepartamento.DisplayMember = "nombre";
             cmbDepartamento.AutoCompleteMode = AutoCompleteMode.Suggest;
             cmbDepartamento.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-            //if (cmbDepartamento.Items.Count != 0)
-            //{
-            //    int id_dep = Convert.ToInt32(((Modelos.Departamentos.DepartamentoViewModel)cmbDepartamento.SelectedValue).idProvincia);
-            //    loadLocalidades(id_dep);
-            //}
-            //else
-            //{
-            //    cmbLocalidad.DataSource = null;                
-            //}
-
         }      
 
         
 
         public void loadLocalidades(int id_dep)
         {
+            Controladores.Localidades.LocalidadesController localidades = new Controladores.Localidades.LocalidadesController();
             cmbLocalidad.DataSource = localidades.getLocalidades(id_dep);
             cmbLocalidad.DisplayMember = "Nombre";
             cmbLocalidad.AutoCompleteMode = AutoCompleteMode.Suggest;
             cmbLocalidad.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-
-
-
-
         }
 
         public void loadtipodocumento()
@@ -83,30 +68,35 @@ namespace sesion.Clientes
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Modelos.ClienteViewModel clienteModel = new Modelos.ClienteViewModel();
+            Modelos.Cliente.ClienteViewModel clienteModel = new Modelos.Cliente.ClienteViewModel();
 
             Controladores.ClienteControllers clientecontroller = new Controladores.ClienteControllers();
 
             clienteModel.nombre = txtNombre.Text;
+            clienteModel.apellido = txtApellido.Text;
+            clienteModel.id_tipoDoc = ((Modelos.TipoDocumento.TipoDocumentoViewModel)cmbTipoDoc.SelectedValue).id;
+            clienteModel.nro_doc = int.Parse(txtNroDoc.Text);
+            clienteModel.id_tipoCliente = ((Modelos.TipoCliente.TipoClienteViewModel)cmbTipoCliente.SelectedValue).id;
+            clienteModel.id_localidad = ((Modelos.Localidades.LocalidadesViewModel)cmbLocalidad.SelectedValue).ID;
+            clienteModel.cp = int.Parse(txtCodigoPostal.Text);
+            clienteModel.domicilio = txtDomicilio.Text;
+            clienteModel.telefono = txtTelefono.Text;
+            clienteModel.mail = txtMail.Text;
 
-            clientecontroller.inserttest(clienteModel.nombre);
+            clientecontroller.InsertarCliente(clienteModel.nombre,
+                                              clienteModel.apellido,
+                                              clienteModel.id_tipoDoc,
+                                              clienteModel.nro_doc,
+                                              clienteModel.id_tipoCliente,
+                                              clienteModel.id_localidad,
+                                              clienteModel.cp,
+                                              clienteModel.domicilio,
+                                              clienteModel.telefono,
+                                              clienteModel.mail);
 
+            MessageBox.Show("El cliente se creo correcamente", "Cliente");
 
-            
-
-
-            //string Nombre = txtNombre.Text;
-            //string Apellido = txtApellido.Text;
-            //int TipoDoc = int.Parse(cmbTipoDoc.Text);
-            //int NroDoc = int.Parse(txtNroDoc.Text);            
-            //int Localidad = int.Parse(cmbLocalidad.Text);
-            //int CodPostal = int.Parse(txtCodigoPostal.Text);
-            //string Domicilio = txtDomicilio.Text;
-            //string Telefono = txtTelefono.Text;
-            //string Mail = txtMail.Text;
-            //int Tipocliente = int.Parse(cmbTipoCliente.Text);
-
-            //cliente.InsertarCliente(Nombre, Apellido,TipoDoc, NroDoc,Localidad,CodPostal,Domicilio,Telefono,Mail,Tipocliente);
+            loadCliente();
 
         }
 
@@ -122,9 +112,7 @@ namespace sesion.Clientes
             loadLocalidades(id_dep);
         }
 
-
-
-
+               
         #region sergio
 
         public void loadtipocliente()
@@ -133,6 +121,7 @@ namespace sesion.Clientes
 
             cmbTipoCliente.DataSource = tipo.getTipoCliente();
             cmbTipoCliente.DisplayMember = "nombre";
+            cmbTipoDoc.SelectedIndex = -1;
             cmbTipoCliente.AutoCompleteMode = AutoCompleteMode.Suggest;
             cmbTipoCliente.AutoCompleteSource = AutoCompleteSource.ListItems;
 

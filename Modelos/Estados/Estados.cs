@@ -11,6 +11,6 @@ namespace Modelos.Estados
         public int id { get; set; }
         public string nombre { get; set; }
 
-        public virtual ICollection<ClienteViewModel> Clientes { get; set; }
+        public virtual ICollection<Modelos.Cliente.ClienteViewModel> Clientes { get; set; }
     }
 }
