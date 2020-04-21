@@ -8,10 +8,10 @@ namespace Controladores
 {
     public class DepartamentoController
     {
-        Modelos.Entity.DB_4BitsEntities db = new Modelos.Entity.DB_4BitsEntities();
 
         public List<Modelos.Departamentos.DepartamentoViewModel> getDepartamento()
         {
+            Modelos.Entity.DB_4BitsEntities db = new Modelos.Entity.DB_4BitsEntities();
 
             using (db)
             {

@@ -125,6 +125,7 @@
     <Compile Include="Provincia\Provincia.cs" />
     <Compile Include="Estados\Estados.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoDocumento\TipoDocumento.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Usuario\" />

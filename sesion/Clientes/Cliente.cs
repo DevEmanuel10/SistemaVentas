@@ -26,7 +26,8 @@ namespace sesion.Clientes
         {
 
             loadDepartamento();
-            loadCliente();            
+            loadCliente();
+            loadtipodocumento();
         }
 
         public void loadCliente()
@@ -51,7 +52,7 @@ namespace sesion.Clientes
             //    cmbLocalidad.DataSource = null;                
             //}
 
-        }
+        }      
 
         
 
@@ -65,6 +66,17 @@ namespace sesion.Clientes
 
 
 
+
+        }
+
+        public void loadtipodocumento()
+        {
+            Controladores.TipoDocumento.TipoDocumentoController tipo = new Controladores.TipoDocumento.TipoDocumentoController();
+
+            cmbTipoDoc.DataSource = tipo.getTipoDocumento();
+            cmbTipoDoc.DisplayMember = "nombre";
+            cmbTipoDoc.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cmbTipoDoc.AutoCompleteSource = AutoCompleteSource.ListItems;
 
         }
 
