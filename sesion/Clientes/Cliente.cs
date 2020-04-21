@@ -28,6 +28,7 @@ namespace sesion.Clientes
             loadDepartamento();
             loadCliente();
             loadtipodocumento();
+            loadtipocliente();
         }
 
         public void loadCliente()
@@ -120,5 +121,30 @@ namespace sesion.Clientes
             int id_dep = Convert.ToInt32(((Modelos.Departamentos.DepartamentoViewModel)cmbDepartamento.SelectedValue).ID);
             loadLocalidades(id_dep);
         }
+
+
+
+
+        #region sergio
+
+        public void loadtipocliente()
+        {
+            Controladores.TipoCliente.TipoClienteController tipo = new Controladores.TipoCliente.TipoClienteController();
+
+            cmbTipoCliente.DataSource = tipo.getTipoCliente();
+            cmbTipoCliente.DisplayMember = "nombre";
+            cmbTipoCliente.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cmbTipoCliente.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+        }
+
+
+
+        #endregion
+
+
+
+
+
     }
 }
