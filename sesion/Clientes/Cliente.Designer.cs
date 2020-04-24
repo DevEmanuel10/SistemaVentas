@@ -55,6 +55,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.grCliente = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.Button();
+            this.BtnModificar = new System.Windows.Forms.Button();
             this.GroupCliente.SuspendLayout();
             this.grCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -322,12 +324,35 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(878, 347);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(360, 445);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 4;
+            this.Delete.Text = "Eliminar";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // BtnModificar
+            // 
+            this.BtnModificar.Location = new System.Drawing.Point(456, 445);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(75, 23);
+            this.BtnModificar.TabIndex = 5;
+            this.BtnModificar.Text = "Modificar";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 515);
+            this.Controls.Add(this.BtnModificar);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.grCliente);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.GroupCliente);
@@ -373,5 +398,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbDepartamento;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button BtnModificar;
     }
 }

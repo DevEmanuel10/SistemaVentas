@@ -57,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia\ProvinciaController.cs" />
     <Compile Include="TipoCliente\TipoClienteController.cs" />
+    <Compile Include="Estado\EstadosController.cs" />
     <Compile Include="TipoDocumento\TipoDocumentoController.cs" />
   </ItemGroup>
   <ItemGroup>

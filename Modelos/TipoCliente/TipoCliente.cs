@@ -12,7 +12,5 @@ namespace Modelos.TipoCliente
         public string nombre { get; set; }
         public Nullable<int> id_estado { get; set; }
 
-       //aloja
-
     }
 }

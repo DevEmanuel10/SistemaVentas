@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DB_4BitsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DB_4BitsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="clientes">
           <Key>
             <PropertyRef Name="id" />
@@ -27,7 +27,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Fecha" Type="date" />
+          <Property Name="Fecha" Type="datetime" />
           <Property Name="observacion" Type="varchar" MaxLength="50" />
           <Property Name="id_estado" Type="int" />
         </EntityType>
@@ -93,8 +93,8 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_prod" Type="int" />
-          <Property Name="lote" Type="varchar" MaxLength="50" />
-          <Property Name="fecha_Vencimiento" Type="date" />
+          <Property Name="lote1" Type="varchar" MaxLength="50" />
+          <Property Name="fecha_Vencimiento" Type="datetime" />
           <Property Name="id_estado" Type="int" />
         </EntityType>
         <EntityType Name="productos">
@@ -185,7 +185,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_cliente" Type="int" />
           <Property Name="id_usuario" Type="int" />
-          <Property Name="fecha" Type="date" />
+          <Property Name="fecha" Type="datetime" />
           <Property Name="observacion" Type="varchar" MaxLength="50" />
           <Property Name="id_estado" Type="int" />
         </EntityType>
@@ -721,7 +721,8 @@
             <End Role="ventas" EntitySet="ventas" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_4BitsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -752,7 +753,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Fecha" Type="DateTime" Precision="0" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
           <Property Name="observacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="id_estado" Type="Int32" />
           <NavigationProperty Name="estados" Relationship="Self.FK_compras_estados" FromRole="compras" ToRole="estados" />
@@ -848,7 +849,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_prod" Type="Int32" />
           <Property Name="lote1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="fecha_Vencimiento" Type="DateTime" Precision="0" />
+          <Property Name="fecha_Vencimiento" Type="DateTime" Precision="3" />
           <Property Name="id_estado" Type="Int32" />
           <NavigationProperty Name="detalle_Compras" Relationship="Self.FK_detalle_Compras_lote" FromRole="lote" ToRole="detalle_Compras" />
           <NavigationProperty Name="estados" Relationship="Self.FK_lote_estados" FromRole="lote" ToRole="estados" />
@@ -965,7 +966,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_cliente" Type="Int32" />
           <Property Name="id_usuario" Type="Int32" />
-          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <Property Name="fecha" Type="DateTime" Precision="3" />
           <Property Name="observacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="id_estado" Type="Int32" />
           <NavigationProperty Name="clientes" Relationship="Self.FK_ventas_clientes" FromRole="ventas" ToRole="clientes" />
@@ -1606,7 +1607,7 @@
               <MappingFragment StoreEntitySet="lote">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="id_prod" ColumnName="id_prod" />
-                <ScalarProperty Name="lote1" ColumnName="lote" />
+                <ScalarProperty Name="lote1" ColumnName="lote1" />
                 <ScalarProperty Name="fecha_Vencimiento" ColumnName="fecha_Vencimiento" />
                 <ScalarProperty Name="id_estado" ColumnName="id_estado" />
               </MappingFragment>
@@ -1730,7 +1731,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

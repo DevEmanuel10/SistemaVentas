@@ -53,7 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente\Cliente.cs" />
+    <Compile Include="Cliente\ClienteViewModelDataGrid.cs" />
+    <Compile Include="Cliente\ClienteViewModel.cs" />
     <Compile Include="Departamentos\Departamento.cs" />
     <Compile Include="Entity\clientes.cs">
       <DependentUpon>Entity.tt</DependentUpon>
@@ -126,7 +127,7 @@
     </Compile>
     <Compile Include="Localidades\Localidades.cs" />
     <Compile Include="Provincia\Provincia.cs" />
-    <Compile Include="Estados\Estados.cs" />
+    <Compile Include="Estados\EstadosViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoCliente\TipoCliente.cs" />
     <Compile Include="TipoDocumento\TipoDocumento.cs" />

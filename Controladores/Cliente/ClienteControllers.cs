@@ -11,9 +11,71 @@ namespace Controladores
     {
         Modelos.Entity.DB_4BitsEntities db = new Modelos.Entity.DB_4BitsEntities();
 
+
+        #region Metodos GetAll, Get, Add, Update and Delete by Neirot
+        
+        /// <summary>
+        /// Get All clientes Mapping from ClienteDB to ClienteVMDatagrid
+        /// I delegate responsibility for mapping to Models
+        /// Do "AsEnumerable" for next error
+        /// https://odetocode.com/blogs/scott/archive/2012/03/20/avoiding-notsupportedexception-with-iqueryable.aspx
+        /// </summary>
+        /// <returns></returns>
+        public List<Modelos.Cliente.ClienteViewModelDataGrid> GetAll() =>
+                        db.clientes.AsEnumerable().Select(x => new Modelos.Cliente.ClienteViewModelDataGrid(x)).ToList();
+
+        /// <summary>
+        /// ADD Cliente. I do mapping  ClienteVM to ClienteDB
+        /// </summary>
+        /// <param name="ClienteVM">receive CLIENTE VIEWMODEL</param>
+        public void Add(Modelos.Cliente.ClienteViewModel ClienteVM)
+        {
+            db.clientes.Add(ClienteVM.MapOut());
+            db.SaveChanges();
+        }
+        /// <summary>
+        /// Find ClienteDB by Id, Return ClienteVM
+        /// </summary>
+        /// <param name="id">ID to Find Clinte</param>
+        /// <returns></returns>
+        public Modelos.Cliente.ClienteViewModel Get(int id) =>
+                                    new Modelos.Cliente.ClienteViewModel(db.clientes.FirstOrDefault(x => x.id == id));        
+        /// <summary>
+        /// Update ClienteVM to ClienteDB
+        /// </summary>
+        /// <param name="ClinteVM">Generate ClienteVM in View</param>
+        public void Update(Modelos.Cliente.ClienteViewModel ClienteVM)
+        {
+            var ClienteDB = db.clientes.FirstOrDefault(x => x.id == ClienteVM.id); //Busco al cliente a modificar
+            db.Entry(ClienteDB).CurrentValues.SetValues(ClienteVM.MapOut());
+            db.SaveChanges();
+        }
+        /// <summary>
+        /// Delete ClienteVM to ClienteDB
+        /// </summary>
+        /// <param name="ClienteVM">Generate ClienteVM in View</param>
+        public void Delete(int id)
+        {
+            //var ClienteDB = db.clientes.FirstOrDefault(x => x.id == id);// Descomentar si lo queres hacer definitivo
+            //db.clientes.Remove(ClienteDB); // Descomentar si lo queres hacer definitivo
+            //db.SaveChanges(); // Descomentar si lo queres hacer definitivo
+            var ClienteVM = new Modelos.Cliente.ClienteViewModel(db.clientes.FirstOrDefault(x => x.id == id));//Comentar si queres hacer definitivo
+            ClienteVM.id_estado = db.estados.FirstOrDefault(x => x.nombre == "ELIMINADO").id;//Comentar si queres hacer definitivo
+            Update(ClienteVM);//Comentar si queres hacer definitivo
+        }
+
+
+        #endregion
+
+
+
+
+
+
+
+
         public List<Modelos.Cliente.ClienteViewModel> GetCliente ()
         {
-
             using (db)
             {
                 List<Modelos.Cliente.ClienteViewModel> cliente = (from d in db.clientes
@@ -34,7 +96,7 @@ namespace Controladores
             }            
 
         }
-
+      
         public void InsertarCliente(string nombre,
                                     string apellido,
                                     int? tipodoc,
@@ -46,7 +108,6 @@ namespace Controladores
                                     string telefono,
                                     string mail                                    
                                      )
-
         {
 
 
@@ -67,25 +128,9 @@ namespace Controladores
 
                 db.clientes.Add(client);
                 db.SaveChanges();
-
-                
-
             }
 
         }
-
-
-        public void inserttest(string nombre)
-        {
-            Console.Write(nombre);
-
-            
-        }
-        
-
-
-
-
 
     }
 }
