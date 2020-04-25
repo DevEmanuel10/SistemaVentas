@@ -13,6 +13,5 @@ namespace Modelos.TipoCliente
         public Nullable<int> id_estado { get; set; }
 
 
-
     }
 }

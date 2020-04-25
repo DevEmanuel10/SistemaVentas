@@ -54,11 +54,13 @@
     <Compile Include="Cliente\ClienteControllers.cs" />
     <Compile Include="Departamento\DepartamentoController.cs" />
     <Compile Include="Localidades\LocalidadesController.cs" />
+    <Compile Include="Productos\ProductoController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia\ProvinciaController.cs" />
     <Compile Include="TipoCliente\TipoClienteController.cs" />
     <Compile Include="Estado\EstadosController.cs" />
     <Compile Include="TipoDocumento\TipoDocumentoController.cs" />
+    <Compile Include="Unidad\UnidadController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modelos\Modelos.csproj">
@@ -70,6 +72,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

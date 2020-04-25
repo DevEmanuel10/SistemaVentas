@@ -126,11 +126,13 @@
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Localidades\Localidades.cs" />
+    <Compile Include="Productos\ProductosViewModel.cs" />
     <Compile Include="Provincia\Provincia.cs" />
     <Compile Include="Estados\EstadosViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoCliente\TipoCliente.cs" />
     <Compile Include="TipoDocumento\TipoDocumento.cs" />
+    <Compile Include="Unidad\UnidadViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Usuario\" />
