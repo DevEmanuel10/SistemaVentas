@@ -31,5 +31,11 @@ namespace sesion
             client.ShowDialog();
 
         }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            Productos.productos miform = new Productos.productos();
+            miform.ShowDialog();
+        }
     }
 }
