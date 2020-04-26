@@ -126,6 +126,7 @@
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Localidades\Localidades.cs" />
+    <Compile Include="Productos\ProductoViewModelDataGrid.cs" />
     <Compile Include="Productos\ProductosViewModel.cs" />
     <Compile Include="Provincia\Provincia.cs" />
     <Compile Include="Estados\EstadosViewModel.cs" />

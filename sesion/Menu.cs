@@ -34,8 +34,8 @@ namespace sesion
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            Productos.productos miform = new Productos.productos();
-            miform.ShowDialog();
+            Productos.productos ProdcForm = new Productos.productos();
+            ProdcForm.ShowDialog();
         }
     }
 }
