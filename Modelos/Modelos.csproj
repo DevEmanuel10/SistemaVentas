@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Cliente\ClienteViewModelDataGrid.cs" />
     <Compile Include="Cliente\ClienteViewModel.cs" />
-    <Compile Include="Departamentos\Departamento.cs" />
+    <Compile Include="Departamentos\DepartamentoViewModel.cs" />
     <Compile Include="Entity\clientes.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
