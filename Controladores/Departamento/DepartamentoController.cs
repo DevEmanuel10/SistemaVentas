@@ -8,6 +8,8 @@ namespace Controladores
 {
     public class DepartamentoController
     {
+        Modelos.Entity.DB_4BitsEntities dbtest = new Modelos.Entity.DB_4BitsEntities();
+             
 
         public List<Modelos.Departamentos.DepartamentoViewModel> getDepartamento()
         {
@@ -29,20 +31,12 @@ namespace Controladores
 
         }
 
-        //public List<Modelos.Departamentos.DepartamentoViewModel> BuscarDepartamento(string dep)
-        //{
-        //    using (db)
-        //    {
-        //        List<Modelos.Departamentos.DepartamentoViewModel> departamentos = (from d in db.Departamentos
-        //                                                                           where d.Nombre.Contains(dep)
-        //                                                                           select new Modelos.Departamentos.DepartamentoViewModel
-        //                                                                           {
-        //                                                                               Nombre = d.Nombre
-        //                                                                           }).Take(5).ToList();
-        //        return departamentos;
+       
+        public Modelos.Departamentos.DepartamentoViewModel Get(int id) =>
+                                   new Modelos.Departamentos.DepartamentoViewModel(dbtest.Departamentos.FirstOrDefault(x=> x.ID == id));
 
-        //    }
+        
 
-        //}
+       
     }
 }

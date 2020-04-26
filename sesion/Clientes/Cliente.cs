@@ -28,12 +28,14 @@ namespace sesion.Clientes
             loadtipocliente();
         }
 
+        #region load
+       
         public void loadCliente()
         {
             Controladores.ClienteControllers cliente = new Controladores.ClienteControllers();
             //dataGridView1.DataSource = cliente.GetCliente();
             dataGridView1.DataSource = cliente.GetAll();
-            this.dataGridView1.Columns["id"].Visible = false;            
+            this.dataGridView1.Columns["id"].Visible = false;
         }
 
         public void loadDepartamento()
@@ -43,9 +45,7 @@ namespace sesion.Clientes
             cmbDepartamento.DisplayMember = "nombre";
             cmbDepartamento.AutoCompleteMode = AutoCompleteMode.Suggest;
             cmbDepartamento.AutoCompleteSource = AutoCompleteSource.ListItems;
-        }      
-
-        
+        }
 
         public void loadLocalidades(int id_dep)
         {
@@ -66,12 +66,42 @@ namespace sesion.Clientes
             cmbTipoDoc.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
+        public void loadtipocliente()
+        {
+            Controladores.TipoCliente.TipoClienteController tipo = new Controladores.TipoCliente.TipoClienteController();
+
+            cmbTipoCliente.DataSource = tipo.getTipoCliente();
+            cmbTipoCliente.DisplayMember = "nombre";
+            cmbTipoDoc.SelectedIndex = -1;
+            cmbTipoCliente.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cmbTipoCliente.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+        }
+
+        #endregion
+
+        #region Fuction
+        public void cleantext()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtNroDoc.Clear();
+            txtCodigoPostal.Clear();
+            txtDomicilio.Clear();
+            txtTelefono.Clear();
+            txtMail.Clear();
+
+        }
+        #endregion 
+
+
         /// <summary>
         /// Creo este metodo para que sea llamado para 3 diferentes funcion
         /// Add y update. los 2 van a hacer lo mismo, Evitamos duplicar codigo al pedo =)
         /// </summary>
         /// <param name="estado">Dependiendo desde lo llamemos, le pasamos el estado</param>
         /// <returns></returns>
+        /// 
         private Modelos.Cliente.ClienteViewModel CreateCliente(string estado)
         {
             Modelos.Cliente.ClienteViewModel clienteModel = new Modelos.Cliente.ClienteViewModel();            
@@ -130,8 +160,12 @@ namespace sesion.Clientes
             MessageBox.Show("El cliente se creo correcamente", "Cliente");
 
             loadCliente();
+            loadDepartamento();
+            loadtipocliente();
+            cleantext();
 
         }
+
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             if (idCliente > 0)
@@ -164,8 +198,6 @@ namespace sesion.Clientes
             
         }
 
-
-
         private void cmbDepartamento_SelectionChangeCommitted(object sender, EventArgs e)
         {
             int id_dep = Convert.ToInt32(((Modelos.Departamentos.DepartamentoViewModel)cmbDepartamento.SelectedValue).ID);
@@ -177,30 +209,6 @@ namespace sesion.Clientes
             int id_dep = Convert.ToInt32(((Modelos.Departamentos.DepartamentoViewModel)cmbDepartamento.SelectedValue).ID);
             loadLocalidades(id_dep);
         }
-
-               
-        #region sergio
-
-        public void loadtipocliente()
-        {
-            Controladores.TipoCliente.TipoClienteController tipo = new Controladores.TipoCliente.TipoClienteController();
-
-            cmbTipoCliente.DataSource = tipo.getTipoCliente();
-            cmbTipoCliente.DisplayMember = "nombre";
-            cmbTipoDoc.SelectedIndex = -1;
-            cmbTipoCliente.AutoCompleteMode = AutoCompleteMode.Suggest;
-            cmbTipoCliente.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-        }
-
-
-
-
-
-
-
-        #endregion
-
 
         //Casi hecho, te dejo la magia de completar el combobox jaja
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -214,7 +222,14 @@ namespace sesion.Clientes
 
             txtNombre.Text = ClienteVM.nombre;
             txtApellido.Text = ClienteVM.apellido;
-            //...continuara jaja
+
+            var papa = ClienteC.Get(ClienteVM.id);
+
+
+
+
+
+            
         }
 
         

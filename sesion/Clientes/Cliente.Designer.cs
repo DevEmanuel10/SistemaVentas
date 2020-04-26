@@ -99,7 +99,7 @@
             this.GroupCliente.Location = new System.Drawing.Point(33, 39);
             this.GroupCliente.Name = "GroupCliente";
             this.GroupCliente.Size = new System.Drawing.Size(272, 391);
-            this.GroupCliente.TabIndex = 1;
+            this.GroupCliente.TabIndex = 0;
             this.GroupCliente.TabStop = false;
             this.GroupCliente.Text = "Cliente";
             // 
@@ -109,7 +109,7 @@
             this.label1.Location = new System.Drawing.Point(17, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 25;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Departamento";
             // 
             // cmbDepartamento
@@ -118,7 +118,7 @@
             this.cmbDepartamento.Location = new System.Drawing.Point(109, 147);
             this.cmbDepartamento.Name = "cmbDepartamento";
             this.cmbDepartamento.Size = new System.Drawing.Size(121, 21);
-            this.cmbDepartamento.TabIndex = 24;
+            this.cmbDepartamento.TabIndex = 15;
             this.cmbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cmbDepartamento_SelectedIndexChanged);
             this.cmbDepartamento.SelectionChangeCommitted += new System.EventHandler(this.cmbDepartamento_SelectionChangeCommitted);
             // 
@@ -127,7 +127,7 @@
             this.txtCodigoPostal.Location = new System.Drawing.Point(110, 215);
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigoPostal.TabIndex = 23;
+            this.txtCodigoPostal.TabIndex = 17;
             // 
             // cmbLocalidad
             // 
@@ -135,7 +135,7 @@
             this.cmbLocalidad.Location = new System.Drawing.Point(110, 182);
             this.cmbLocalidad.Name = "cmbLocalidad";
             this.cmbLocalidad.Size = new System.Drawing.Size(121, 21);
-            this.cmbLocalidad.TabIndex = 22;
+            this.cmbLocalidad.TabIndex = 16;
             // 
             // label3
             // 
@@ -143,7 +143,7 @@
             this.label3.Location = new System.Drawing.Point(16, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 20;
+            this.label3.TabIndex = 6;
             this.label3.Text = "Codigo Postal";
             // 
             // label2
@@ -152,7 +152,7 @@
             this.label2.Location = new System.Drawing.Point(19, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 18;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Localidad";
             // 
             // txtNroDoc
@@ -160,7 +160,7 @@
             this.txtNroDoc.Location = new System.Drawing.Point(110, 117);
             this.txtNroDoc.Name = "txtNroDoc";
             this.txtNroDoc.Size = new System.Drawing.Size(100, 20);
-            this.txtNroDoc.TabIndex = 15;
+            this.txtNroDoc.TabIndex = 14;
             // 
             // lblNroDoc
             // 
@@ -168,7 +168,7 @@
             this.lblNroDoc.Location = new System.Drawing.Point(17, 117);
             this.lblNroDoc.Name = "lblNroDoc";
             this.lblNroDoc.Size = new System.Drawing.Size(82, 13);
-            this.lblNroDoc.TabIndex = 14;
+            this.lblNroDoc.TabIndex = 3;
             this.lblNroDoc.Text = "Nro Documento";
             // 
             // cmbTipoDoc
@@ -193,42 +193,42 @@
             this.cmbTipoCliente.Location = new System.Drawing.Point(110, 348);
             this.cmbTipoCliente.Name = "cmbTipoCliente";
             this.cmbTipoCliente.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoCliente.TabIndex = 12;
+            this.cmbTipoCliente.TabIndex = 21;
             // 
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(110, 315);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(100, 20);
-            this.txtMail.TabIndex = 11;
+            this.txtMail.TabIndex = 20;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(110, 281);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefono.TabIndex = 10;
+            this.txtTelefono.TabIndex = 19;
             // 
             // txtDomicilio
             // 
             this.txtDomicilio.Location = new System.Drawing.Point(109, 250);
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(100, 20);
-            this.txtDomicilio.TabIndex = 9;
+            this.txtDomicilio.TabIndex = 18;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(109, 56);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtApellido.TabIndex = 8;
+            this.txtApellido.TabIndex = 12;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(109, 27);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 11;
             // 
             // TipoDocumento
             // 
@@ -236,7 +236,7 @@
             this.TipoDocumento.Location = new System.Drawing.Point(16, 88);
             this.TipoDocumento.Name = "TipoDocumento";
             this.TipoDocumento.Size = new System.Drawing.Size(83, 13);
-            this.TipoDocumento.TabIndex = 6;
+            this.TipoDocumento.TabIndex = 2;
             this.TipoDocumento.Text = "TipoDocumento";
             // 
             // lblTipoCliente
@@ -245,7 +245,7 @@
             this.lblTipoCliente.Location = new System.Drawing.Point(17, 351);
             this.lblTipoCliente.Name = "lblTipoCliente";
             this.lblTipoCliente.Size = new System.Drawing.Size(60, 13);
-            this.lblTipoCliente.TabIndex = 5;
+            this.lblTipoCliente.TabIndex = 10;
             this.lblTipoCliente.Text = "TipoCliente";
             // 
             // lblMail
@@ -254,7 +254,7 @@
             this.lblMail.Location = new System.Drawing.Point(18, 313);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(26, 13);
-            this.lblMail.TabIndex = 4;
+            this.lblMail.TabIndex = 9;
             this.lblMail.Text = "Mail";
             // 
             // lblTelefono
@@ -263,7 +263,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(19, 284);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
-            this.lblTelefono.TabIndex = 3;
+            this.lblTelefono.TabIndex = 8;
             this.lblTelefono.Text = "Telefono";
             // 
             // lblDomicilio
@@ -272,7 +272,7 @@
             this.lblDomicilio.Location = new System.Drawing.Point(17, 250);
             this.lblDomicilio.Name = "lblDomicilio";
             this.lblDomicilio.Size = new System.Drawing.Size(49, 13);
-            this.lblDomicilio.TabIndex = 2;
+            this.lblDomicilio.TabIndex = 7;
             this.lblDomicilio.Text = "Domicilio";
             // 
             // lblApellido
