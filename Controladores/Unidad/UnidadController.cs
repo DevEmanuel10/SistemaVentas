@@ -20,8 +20,9 @@ namespace Controladores.Unidad
         //}
 
         public List<Modelos.Unidad.UnidadViewModel> GetAll() => DB.unidades.AsEnumerable().Select(x => new Modelos.Unidad.UnidadViewModel(x)).ToList();
-       
 
+        public Modelos.Unidad.UnidadViewModel Get(int? id) =>
+                                  new Modelos.Unidad.UnidadViewModel(DB.unidades.FirstOrDefault(x => x.id == id));
 
 
 
